@@ -1574,7 +1574,8 @@ const resultData = {
 
 allResults.push(resultData);
 localStorage.setItem("CMT_RESULTS", JSON.stringify(allResults));
-  sendToGoogleSheet(resultData);
+
+sendToGoogleSheet(resultData);
 
  document.getElementById("operational").innerHTML=`
   <div style="padding:40px">
@@ -1731,6 +1732,7 @@ body: JSON.stringify(data)
 </audio>
 </body>
 </html>
+
 
 
 

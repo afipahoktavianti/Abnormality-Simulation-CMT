@@ -1715,11 +1715,12 @@ headers:{
 },
 
 body: JSON.stringify(data)
-
-});
+})
+.then(response => response.text())
+.then(result => console.log("SUCCESS:", result))
+.catch(error => console.log("ERROR:", error));
 
 }
-
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
@@ -1732,6 +1733,7 @@ body: JSON.stringify(data)
 </audio>
 </body>
 </html>
+
 
 
 

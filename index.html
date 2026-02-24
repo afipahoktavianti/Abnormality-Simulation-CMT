@@ -1697,7 +1697,29 @@ start = function(){
 
 };
 
+
 </script>
+
+<script>
+
+function sendToGoogleSheet(data){
+
+fetch("https://script.google.com/macros/s/AKfycbxVuHx9CadJVxRitqIF_4wByS_5eT0D18I0psFHr-33ShAF05NBvGpBAIjcEV99sKgPsg/exec", {
+
+method: "POST",
+
+headers:{
+"Content-Type":"application/json"
+},
+
+body: JSON.stringify(data)
+
+});
+
+}
+
+</script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <audio id="ringtone" loop>
   <source src="ringtone.mp3" type="audio/mpeg">
@@ -1708,3 +1730,4 @@ start = function(){
 </audio>
 </body>
 </html>
+
